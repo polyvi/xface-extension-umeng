@@ -1,0 +1,31 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.polyvi.xface.extension.umeng"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        version="1.0.0">
+
+    <name>Umeng</name>
+    <author>PolyVi Inc.</author>
+    <description>xFace Umeng Extension</description>
+    <license>GPLv3</license>
+    <keywords>cordova,xface,umeng</keywords>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="XUmengExt">
+                <param name="ios-package" value="XUmengExt" />
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/XUmengExt.h" />
+        <source-file src="src/ios/XUmengExt.m" />
+
+        <header-file src="src/ios/UMAnalytics_SDK_2.2.1/MobClick.h" />
+        <source-file src="src/ios/UMAnalytics_SDK_2.2.1/libMobClickLibrary.a" framework="true"/>
+
+        <framework src="libz.dylib" />
+    </platform>
+</plugin>
