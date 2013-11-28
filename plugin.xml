@@ -28,4 +28,23 @@
 
         <framework src="libz.dylib" />
     </platform>
+
+    <!-- wp8 -->
+    <platform name="wp8">
+        <config-file target="config.xml" parent="/*">
+            <feature name="XUmengExt">
+                <param name="wp-package" value="XUmengExt"/>
+            </feature>
+        </config-file>
+
+        <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
+            <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+            <Capability Name="ID_CAP_IDENTITY_USER" />
+            <Capability Name="ID_CAP_NETWORKING" />
+        </config-file>
+
+        <source-file src="src/wp/XUmengExt.cs" />
+        <source-file src="src/wp/UmengAnalyticsWP8.dll" />
+
+    </platform>
 </plugin>
