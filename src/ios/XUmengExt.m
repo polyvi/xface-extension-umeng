@@ -24,6 +24,8 @@
 //
 //
 
+#import <xFace/XUtils.h>
+
 #import "XUmengExt.h"
 #import "MobClick.h"
 
@@ -36,17 +38,25 @@ static NSString *const kUMAppKey     = @"526f500356240bdc2d06fb7a";
 {
     self = (id)[super initWithWebView:theWebView];
     if (self) {
-        // 初始化UMAnalytics
-        [MobClick setCrashReportEnabled:YES];
-
-        // REALTIME只在模拟器和DEBUG模式下生效，真机release模式会自动改成BATCH
-        // BATCH策略说明：应用程序每次只在启动时会向服务器发送一次消息(BATCH策略)，在应用使用过程中产生的所有消息都会在下次启动时候发送。
-        // 如果应用程序启动时处在不联网状态，那么消息将会缓存在本地，下次再尝试发送
-        [MobClick startWithAppkey:kUMAppKey reportPolicy:(ReportPolicy)REALTIME channelId:nil];
-
-        // TODO:监听event实现event,screen统计功能
+        //确保Umeng只被初始化一次
+        if (![XUtils isDefaultAppWebView:theWebView]) {
+            self = nil;
+        }
     }
     return self;
+}
+
+- (void)pluginInitialize
+{
+    // 初始化UMAnalytics
+    [MobClick setCrashReportEnabled:YES];
+
+    // REALTIME只在模拟器和DEBUG模式下生效，真机release模式会自动改成BATCH
+    // BATCH策略说明：应用程序每次只在启动时会向服务器发送一次消息(BATCH策略)，在应用使用过程中产生的所有消息都会在下次启动时候发送。
+    // 如果应用程序启动时处在不联网状态，那么消息将会缓存在本地，下次再尝试发送
+    [MobClick startWithAppkey:kUMAppKey reportPolicy:(ReportPolicy)REALTIME channelId:nil];
+
+    // TODO:实现在线更新以及event监听，增加screen的统计功能
 }
 
 @end
