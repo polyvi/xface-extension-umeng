@@ -14,7 +14,7 @@
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="XUmengExt">
+            <feature name="Umeng">
                 <param name="ios-package" value="XUmengExt" />
                 <param name="onload" value="true"/>
             </feature>
@@ -32,7 +32,7 @@
     <!-- wp8 -->
     <platform name="wp8">
         <config-file target="config.xml" parent="/*">
-            <feature name="XUmengExt">
+            <feature name="Umeng">
                 <param name="wp-package" value="XUmengExt"/>
             </feature>
         </config-file>
@@ -45,6 +45,29 @@
 
         <source-file src="src/wp/XUmengExt.cs" />
         <source-file src="src/wp/UmengAnalyticsWP8.dll" />
+
+    </platform>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Umeng">
+                <param name="android-package" value="com.polyvi.xface.extension.umeng.XUmengExt" />
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <meta-data
+                android:name="UMENG_APPKEY"
+                android:value="51de72fd56240b549d001092" >
+            </meta-data>
+            <meta-data
+                android:name="UMENG_CHANNEL"
+                android:value="polyvi" >
+            </meta-data>
+        </config-file>
+        <source-file src="src/android/XUmengExt.java" target-dir="src/com/polyvi/xface/extension/umeng"/>
+        <source-file src="src/android/umeng_sdk.jar" target-dir="libs/"/>
 
     </platform>
 </plugin>
