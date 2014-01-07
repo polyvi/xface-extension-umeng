@@ -21,3 +21,5 @@
 -->
 
 # Release Notes
+### 1.0.0 Tue Jan 07 2014 16:09:42 GMT+0800 (CST)
+ *  [android]Fix problem of tag meta-data add wrong place
