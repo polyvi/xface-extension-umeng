@@ -1,4 +1,4 @@
-REPOSITORY = 'git@git.polyvi.com:xface-extension-umeng.git'
+REPOSITORY = 'git@gitlab.polyvi.com:xface/xface-extension-umeng.git'
 REVIEWBOARD_URL = 'http://review.polyvi.com/reviews/'
 GUESS_FIELDS = 'true'
 TRACKING_BRANCH = 'origin/dev'
