@@ -23,3 +23,6 @@
 # Release Notes
 ### 1.0.0 Tue Jan 07 2014 16:09:42 GMT+0800 (CST)
  *  [android]Fix problem of tag meta-data add wrong place
+### 1.0.1 Mon Jan 27 2014 15:57:02 GMT+0800 (CST)
+ *  batch modify .reviewboard
+ *  Incremented plugin version on dev branch to 1.0.1-dev
