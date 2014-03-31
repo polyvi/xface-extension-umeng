@@ -17,6 +17,10 @@
             <feature name="Umeng">
                 <param name="ios-package" value="XUmengExt" />
                 <param name="onload" value="true"/>
+
+                <preference name="UmengAppKey" value="" />
+                <preference name="UmengReportPolicy" value="" />
+                <preference name="UmengChannel" value="" />
             </feature>
         </config-file>
 
