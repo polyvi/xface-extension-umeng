@@ -26,3 +26,9 @@
 ### 1.0.1 Mon Jan 27 2014 15:57:02 GMT+0800 (CST)
  *  batch modify .reviewboard
  *  Incremented plugin version on dev branch to 1.0.1-dev
+
+## 1.0.2 (Mon Mar 31 2014)
+
+
+ *  [iOS] Retrieve appKey，reportPolicy and channelId from config preference.
+ *  Incremented plugin version on dev branch to 1.0.2-dev
