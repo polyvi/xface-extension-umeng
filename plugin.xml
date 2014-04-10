@@ -63,7 +63,7 @@
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <meta-data
                 android:name="UMENG_APPKEY"
-                android:value="51de72fd56240b549d001092" >
+                android:value="53460c2356240b07000d351d" >
             </meta-data>
             <meta-data
                 android:name="UMENG_CHANNEL"
