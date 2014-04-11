@@ -27,8 +27,8 @@
         <header-file src="src/ios/XUmengExt.h" />
         <source-file src="src/ios/XUmengExt.m" />
 
-        <header-file src="src/ios/UMAnalytics_SDK_2.2.1/MobClick.h" />
-        <source-file src="src/ios/UMAnalytics_SDK_2.2.1/libMobClickLibrary.a" framework="true"/>
+        <header-file src="src/ios/UMAnalytics_Sdk_2.2.2.OpenUDID/MobClick.h" />
+        <source-file src="src/ios/UMAnalytics_Sdk_2.2.2.OpenUDID/libMobClickLibrary.a" framework="true"/>
 
         <framework src="libz.dylib" />
     </platform>
