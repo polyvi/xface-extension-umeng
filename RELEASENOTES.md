@@ -32,3 +32,15 @@
 
  *  [iOS] Retrieve appKey，reportPolicy and channelId from config preference.
  *  Incremented plugin version on dev branch to 1.0.2-dev
+
+
+## 1.0.3 (Wed May 07 2014)
+
+
+ *  Modify config.xml path error in plugin.xml
+ *  [iOS]Updated descriptions for preferences
+ *  [iOS]Added descriptions for preferences
+ *  [iOS]Update Umeng sdk to 2.2.2 (without IDFA)
+ *  intial readme
+ *  Modify umeng key value to distinguish xFace 3.1 and xFace 3.2
+ *  Incremented plugin version on dev branch to 1.0.3-dev
